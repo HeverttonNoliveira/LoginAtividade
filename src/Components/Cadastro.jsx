@@ -43,7 +43,7 @@ export default () => {
     //Função para mostrar a mensagem de boas vindas
     function handleCadastrarPress() {
         setShowCreate(true);
-        setShowCreate(true);
+        setShowCreate(false);
     }
 
     function handleUpdatePress() {
@@ -146,7 +146,6 @@ export default () => {
                     maxLength={8}
                 />
             </View>
-
             <TextInput
                 style={estilo.input}
                 label="Cidade"
@@ -184,19 +183,24 @@ export default () => {
 
             </View>
 
-            <Button style={estilo.buttonLogin} mode="contained" onPress={handleDeletePress}>
-                Excluir
-            </Button>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
 
-            <Button style={estilo.buttonLogin} mode="contained" onPress={handleSearchPress}>
-                Pesquisar
-            </Button>
+                <Button style={estilo.buttonLogin} mode="contained" onPress={handleDeletePress}>
+                    Excluir
+                </Button>
+
+                <Button style={estilo.buttonLogin} mode="contained" onPress={handleSearchPress}>
+                    Pesquisar
+                </Button>
+
+            </View>
+
 
             {/* Mostrar mensagem de boas-vindas */}
-            {showWelcome && <Text style={estilo.FontePadrao}>{Create}</Text>}
-            {showaccount && <Text style={estilo.FontePadrao}>{Update}</Text>}
-            {showaccount && <Text style={estilo.FontePadrao}>{Delete}</Text>}
-            {showaccount && <Text style={estilo.FontePadrao}>{Search}</Text>}
+            {showcrate && <Text style={estilo.FontePadrao}>{Create()}</Text>}
+            {showupdate && <Text style={estilo.FontePadrao}>{Update()}</Text>}
+            {showdelete && <Text style={estilo.FontePadrao}>{Delete()}</Text>}
+            {showsearch && <Text style={estilo.FontePadrao}>{Search()}</Text>}
 
         </View>
     )
