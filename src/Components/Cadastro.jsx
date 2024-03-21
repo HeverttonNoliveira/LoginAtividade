@@ -16,10 +16,10 @@ export default () => {
     const [state, setState] = useState('');
 
     //Buttons
-    const [showcrate, setShowCreate] = useState("");
-    const [showupdate, setShowUpdate] = useState("");
-    const [showdelete, setShowDelete] = useState("");
-    const [showsearch, setShowSearch] = useState("");
+    const [showcrate, setShowCreate] = useState(false);
+    const [showupdate, setShowUpdate] = useState(false);
+    const [showdelete, setShowDelete] = useState(false);
+    const [showsearch, setShowSearch] = useState(false);
 
     // Funcão para armazenar user a mensagem de boas vindas
 
@@ -43,22 +43,18 @@ export default () => {
     //Função para mostrar a mensagem de boas vindas
     function handleCadastrarPress() {
         setShowCreate(true);
-        setShowCreate(false);
     }
 
     function handleUpdatePress() {
         setShowUpdate(true);
-        setShowUpdate(false);
     }
 
     function handleDeletePress() {
         setShowDelete(true);
-        setShowDelete(false);
     }
 
     function handleSearchPress() {
         setShowSearch(true);
-        setShowSearch(false);
     }
 
 
@@ -67,7 +63,7 @@ export default () => {
 
             <Image
                 style={style.Image}
-                source={require("../image/Logo.png")}
+                source={require("../image/inicioLogo.png")}
             />
             <Text style={estilo.Title}>Criar Cadastro</Text>
 
